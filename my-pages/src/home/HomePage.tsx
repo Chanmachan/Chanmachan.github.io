@@ -1,27 +1,37 @@
-import React from 'react';
-import icon from '../static/icon.png'
-import './HomePage.css'
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+import { Box, Button, Flex, VStack } from '@chakra-ui/react';
+import ProfileDetail from './ProfileDetail';
+import AboutMe from './AboutMe';
+import Works from './Works';
 
 function HomePage() {
-    return (
-        <div className="home-container">
-            <div className="profile-section">
-                <img src={icon} alt="togepi" className="profile-icon" />
-                <div className="profile-info">
-                    <h1>Chanmachan</h1>
-                    <a href="https://github.com/Chanmachan" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub}/>
-                    </a>
-                    <div className="button-container">
-                        <button onClick={() => window.location.href='/works'}>My Works</button>
-                        <button onClick={() => window.location.href='/about'}>About Me</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+  const tmp : string = '200px';
+  const [activeView, setActiveView] = useState('aboutMe');  // 状態として現在のビューを保持
+
+  const renderContent = () => {
+    if (activeView === 'aboutMe') {
+      return <AboutMe />;
+    } else if (activeView === 'works') {
+      return <Works />;
+    }
+  };
+
+  return (
+    <Flex justifyContent='flex-start' pl={['10px', '30px', '50px']} py={10}>
+      <VStack spacing={4} align='start' width={tmp}>
+        <ProfileDetail size={tmp}/>
+        <Button variant='outline' borderColor='black' width={tmp} onClick={() => setActiveView('aboutMe')}>
+          About Me
+        </Button>
+        <Button variant='outline' borderColor='black' width={tmp} onClick={() => setActiveView('works')}>
+          Works
+        </Button>
+      </VStack>
+      <Box flex='1' pl={5}>
+        {renderContent()}
+      </Box>
+    </Flex>
+  );
 }
 
 export default HomePage;

@@ -63,6 +63,13 @@ const Works = () => {
           githubUrl='https://github.com/scandamus'
         />
 
+        <Project
+          title='GoChat'
+          language='バックエンド-> Go, フロントエンド-> React(ts)'
+          description='OAuth(googleのみ)によるログインのついたリアルタイムチャットアプリ'
+          githubUrl='https://github.com/Chanmachan/GoChat'
+        />
+
       </VStack>
     </Box>
   );

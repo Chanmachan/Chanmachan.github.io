@@ -40,7 +40,7 @@ const AboutMe = () => {
 
       <Heading fontSize='lg' mt={4} mb={2}><br/>言語・ツール</Heading>
       <Text>
-        C, C++, Python(Django), TypeScript, △JavaScript, Docker
+        C, C++, Python(Django), TypeScript, △JavaScript, Docker, Go
       </Text>
       <Text mt={2}>JetBrainsのエディタやEmacsを好んで使っています</Text>
     </Box>

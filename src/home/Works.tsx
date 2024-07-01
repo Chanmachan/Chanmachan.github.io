@@ -66,7 +66,7 @@ const Works = () => {
         <Project
           title='GoChat'
           language='バックエンド-> Go, フロントエンド-> React(ts)'
-          description='OAuth(googleのみ)によるログインのついたリアルタイムチャットアプリを開発した'
+          description='OAuth(googleのみ)によるログイン機能のついたリアルタイムチャットアプリを開発した'
           githubUrl='https://github.com/Chanmachan/GoChat'
         />
 

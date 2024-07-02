@@ -25,7 +25,7 @@ function ProfileDetail({size}: ProfileDetailProps) {
         mb={4} />
       <Text fontSize='xl' fontWeight='bold'>Chanmachan</Text>
       <Text mb={1}>
-        Software Developer and Designer
+        I am a student of Meiji University and 42tokyo
       </Text>
       <Flex align='center'> {/* Flex コンテナを使用し、アイテムを垂直方向に中央揃え */}
         <Icon as={MdLocationPin} color='red.500' mr={2} w={5} h={5} mt={-1} />{/* アイコンの幅、高さ、マージントップを調整 */}
